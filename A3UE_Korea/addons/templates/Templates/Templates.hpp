@@ -15,8 +15,6 @@ class Templates
         description = "An oppressive hermit nation allied with China and Russia"; // If this isn't included, no description will show (unless inherited from the base class.)
     };
 
-    class Korea_Base;
-
     class ROK_Units : Korea_Base
     { 
         basepath = QPATHTOFOLDER(Templates\ROK); //the path to the folder the template is located in, this translates to "\x\A3AE\addons\templates\Templates\Vanilla"
@@ -28,8 +26,6 @@ class Templates
         climate[] = {"temperate"}; // climate that the template can be selected on.
         description = "A democratic republic allied with the United States and its Western partners"; // If this isn't included, no description will show (unless inherited from the base class.)
     };
-
-    class Korea_Base;
 
     class FKM_Units : Korea_Base
     { 

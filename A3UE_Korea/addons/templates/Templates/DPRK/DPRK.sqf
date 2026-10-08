@@ -41,7 +41,7 @@
 ["vehiclesAmphibious", []] call _fnc_saveToTemplate;
 
 ["vehiclesPlanesCAS", ["Flex_CUP_KPA_Su25_Dyn"]] call _fnc_saveToTemplate;
-["vehiclesPlanesAA", ["Flex_CUP_KPA_Su25_Dyn"]] call _fnc_saveToTemplate;
+["vehiclesPlanesAA", ["Flex_CUP_KPA_Mig29"]] call _fnc_saveToTemplate;
 ["vehiclesPlanesTransport", ["Flex_CUP_KPA_AN2"]] call _fnc_saveToTemplate;
 
 ["vehiclesHelisLight", ["Flex_CUP_KPA_Mi8"]] call _fnc_saveToTemplate;
