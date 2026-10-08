@@ -88,7 +88,7 @@
 ///  Identities   ///
 /////////////////////
 
-["faces", ["AsianHead_A3_03,","AsianHead_A3_01","AsianHead_A3_02"]] call _fnc_saveToTemplate;
+["faces", ["AsianHead_A3_03","AsianHead_A3_01","AsianHead_A3_02"]] call _fnc_saveToTemplate;
 ["voices", ["Male01CHI","Male02CHI","Male03CHI"]] call _fnc_saveToTemplate;
 "DPRKMen" call _fnc_saveNames;
 

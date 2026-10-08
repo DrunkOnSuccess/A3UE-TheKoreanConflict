@@ -88,7 +88,7 @@
 ///  Identities   ///
 /////////////////////
 
-["faces", ["AsianHead_A3_03,","AsianHead_A3_01","AsianHead_A3_02"]] call _fnc_saveToTemplate;
+["faces", ["AsianHead_A3_03","AsianHead_A3_01","AsianHead_A3_02"]] call _fnc_saveToTemplate;
 ["voices", ["Male01CHI","Male02CHI","Male03CHI"]] call _fnc_saveToTemplate;
 
 //////////////////////////
@@ -218,7 +218,7 @@ _sfLoadoutData set ["atBackpacks", ["Flex_CUP_ROK_Backpack"]];
 _sfLoadoutData set ["helmets", ["Flex_CUP_ROK_H_Opscore_CoverSpec"]];
 _sfLoadoutData set ["slHat", ["Flex_CUP_ROK_Boonie_hs"]];
 _sfLoadoutData set ["sniHats", ["Flex_CUP_ROK_Boonie"]];
-_sfLoadoutData set ["NVGs", ["CUP_NVG_GPNVG_black"]];
+_sfLoadoutData set ["NVGs", ["CUP_NVG_PVS15_black"]];
 _sfLoadoutData set ["binoculars", ["CUP_SOFLAM"]];
 //["Weapon", "Muzzle", "Rail", "Sight", [], [], "Bipod"];
 
@@ -279,12 +279,10 @@ _eliteLoadoutData set ["slRifles", [
 ["FIR_K2R", "", "", "CUP_optic_AC11704_Black", ["30Rnd_556x45_Stanag", "CUP_30Rnd_556x45_Stanag_Tracer_Red"], [], ""], 4
 ]];
 _eliteLoadoutData set ["rifles", [
-["CUP_arifle_G36A3", "", "", "CUP_optic_Eotech553_Black", ["CUP_30Rnd_556x45_G36", "CUP_30Rnd_TE1_Red_Tracer_556x45_G36"], [], ""],
-["CUP_arifle_G36A3", "", "", "CUP_optic_CompM2_low", ["CUP_30Rnd_556x45_G36", "CUP_30Rnd_TE1_Red_Tracer_556x45_G36"], [], ""],
-["CUP_arifle_G36A3", "", "", "CUP_optic_AC11704_Black", ["CUP_30Rnd_556x45_G36", "CUP_30Rnd_TE1_Red_Tracer_556x45_G36"], [], ""],
-["CUP_arifle_G36KA3", "", "", "CUP_optic_Eotech553_Black", ["CUP_30Rnd_556x45_G36", "CUP_30Rnd_TE1_Red_Tracer_556x45_G36"], [], ""],
-["CUP_arifle_G36KA3", "", "", "CUP_optic_CompM2_low", ["CUP_30Rnd_556x45_G36", "CUP_30Rnd_TE1_Red_Tracer_556x45_G36"], [], ""],
-["CUP_arifle_G36KA3", "", "", "CUP_optic_AC11704_Black", ["CUP_30Rnd_556x45_G36", "CUP_30Rnd_TE1_Red_Tracer_556x45_G36"], [], ""]
+["FIR_K2R_NG", "CUP_muzzle_mfsup_Flashhider_556x45_Black", "", "CUP_optic_HoloBlack", ["30Rnd_556x45_Stanag", "CUP_30Rnd_556x45_Stanag_Tracer_Red"], [], ""], 2,
+["FIR_K2R_NG", "", "", "CUP_optic_AC11704_Black", ["30Rnd_556x45_Stanag", "CUP_30Rnd_556x45_Stanag_Tracer_Red"], [], ""], 2,
+["FIR_K2R", "CUP_muzzle_mfsup_Flashhider_556x45_Black", "", "CUP_optic_HoloBlack", ["30Rnd_556x45_Stanag", "CUP_30Rnd_556x45_Stanag_Tracer_Red"], [], ""], 4,
+["FIR_K2R", "", "", "CUP_optic_AC11704_Black", ["30Rnd_556x45_Stanag", "CUP_30Rnd_556x45_Stanag_Tracer_Red"], [], ""], 4
 ]];
 _eliteLoadoutData set ["carbines", [
 ["FIR_K1AR", "CUP_muzzle_mfsup_Flashhider_556x45_Black", "", "CUP_optic_HoloBlack", ["30Rnd_556x45_Stanag", "CUP_30Rnd_556x45_Stanag_Tracer_Red"], [], ""], 4,
