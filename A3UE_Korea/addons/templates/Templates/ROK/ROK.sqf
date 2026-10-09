@@ -82,8 +82,6 @@
 ["minefieldAT", ["CUP_Mine"]] call _fnc_saveToTemplate;
 ["minefieldAPERS", ["APERSMine"]] call _fnc_saveToTemplate;
 
-#include "CUP_Vehicle_Attributes.sqf"
-
 /////////////////////
 ///  Identities   ///
 /////////////////////
@@ -416,10 +414,10 @@ _policeLoadoutData set ["sidearms", [
 
 private _militiaLoadoutData = _loadoutData call _fnc_copyLoadoutData;
 _militiaLoadoutData set ["uniforms", ["ROK_Combat_Uniform_1", "ROK_Combat_Uniform_Pads", "ROK_Combat_Uniform_Pads_Rolled", "ROK_Combat_Uniform_Rolled_1"]];
-_militiaLoadoutData set ["vests", ["Flex_CUP_ROK_V_AVSCarrier_Belt"]];
-_militiaLoadoutData set ["slVests", ["Flex_CUP_ROK_V_AVSCarrier_TL"]];
-_militiaLoadoutData set ["mgVests", ["Flex_CUP_ROK_V_AVSCarrier_MG"]];
-_militiaLoadoutData set ["glVests", ["Flex_CUP_ROK_V_AVSCarrier_Belt"]];
+_militiaLoadoutData set ["vests", ["Flex_CUP_ROK_V_IBA_Belt_Lite"]];
+_militiaLoadoutData set ["slVests", ["Flex_CUP_ROK_V_IBA_Belt_Lite"]];
+_militiaLoadoutData set ["mgVests", ["Flex_CUP_ROK_V_IBA_Belt_Lite"]];
+_militiaLoadoutData set ["glVests", ["Flex_CUP_ROK_V_IBA_Belt_Lite"]];
 _militiaLoadoutData set ["backpacks", ["Flex_CUP_ROK_Backpack_Compact"]];
 _militiaLoadoutData set ["atBackpacks", ["Flex_CUP_ROK_Backpack"]];
 _militiaLoadoutData set ["helmets", ["Flex_CUP_ROK_Helmet_02_Nohs", "Flex_CUP_ROK_Helmet_02"]];

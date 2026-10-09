@@ -19,7 +19,7 @@ class CfgMarkers
 	class marker_FKM: flag_NATO 
 	{
 		name = "FKM"
-		icon = QPATHTOFOLDER(Pictures\Markers\ROK_Marker.paa); // not yet done, ROK placeholder for now
-		texture = QPATHTOFOLDER(Pictures\Markers\ROK_Marker.paa);
+		icon = QPATHTOFOLDER(Pictures\Markers\FKM_Marker.paa);
+		texture = QPATHTOFOLDER(Pictures\Markers\FKM_Marker.paa);
 	};
 };

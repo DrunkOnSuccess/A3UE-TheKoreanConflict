@@ -21,15 +21,15 @@
 
 ["vehiclesBasic", ["O_Quadbike_01_F"]] call _fnc_saveToTemplate;
 ["vehiclesLightUnarmed", ["Flex_CUP_KPA_UAZ_Unarmed", "Flex_CUP_KPA_GAZ_Vodnik_Unarmed"]] call _fnc_saveToTemplate;
-["vehiclesLightArmed", ["Flex_CUP_KPA_UAZ_MG", "Flex_CUP_KPA_UAZ_SPG9", "Flex_CUP_KPA_UAZ_METIS"]] call _fnc_saveToTemplate;
+["vehiclesLightArmed", ["Flex_CUP_KPA_UAZ_MG", "Flex_CUP_KPA_UAZ_SPG9", "Flex_CUP_KPA_UAZ_METIS", "Flex_CUP_KPA_GAZ_Vodnik_PK", "Flex_CUP_KPA_GAZ_Vodnik_AGS", "Flex_CUP_KPA_GAZ_Vodnik_BPPU"]] call _fnc_saveToTemplate;
 ["vehiclesTrucks", ["Flex_CUP_KPA_Ural", "Flex_CUP_KPA_Ural_Open", "Flex_CUP_KPA_GAZ_Vodnik_Unarmed"]] call _fnc_saveToTemplate;
 ["vehiclesCargoTrucks", ["Flex_CUP_KPA_Ural", "Flex_CUP_KPA_Ural_Open"]] call _fnc_saveToTemplate;
 ["vehiclesAmmoTrucks", ["Flex_CUP_KPA_Ural_Reammo"]] call _fnc_saveToTemplate;
 ["vehiclesRepairTrucks", ["Flex_CUP_KPA_Ural_Repair"]] call _fnc_saveToTemplate;
 ["vehiclesFuelTrucks", ["Flex_CUP_KPA_Ural_Refuel"]] call _fnc_saveToTemplate;
 ["vehiclesMedical", ["Flex_CUP_KPA_UAZ_AMB", "Flex_CUP_KPA_GAZ_Vodnik_MedEvac"]] call _fnc_saveToTemplate;
-["vehiclesLightAPCs", ["Flex_CUP_KPA_GAZ_Vodnik_PK", "Flex_CUP_KPA_GAZ_Vodnik_AGS", "Flex_CUP_KPA_GAZ_Vodnik_BPPU"]] call _fnc_saveToTemplate;
-["vehiclesAirborne", ["Flex_CUP_KPA_GAZ_Vodnik_BPPU", "Flex_CUP_KPA_GAZ_Vodnik_PK", "Flex_CUP_KPA_GAZ_Vodnik_AGS"]] call _fnc_saveToTemplate;
+["vehiclesLightAPCs", ["Flex_CUP_KPM_BTR60"]] call _fnc_saveToTemplate;
+["vehiclesAirborne", ["Flex_CUP_KPM_BRDM2", "Flex_CUP_KPA_GAZ_Vodnik_PK", "Flex_CUP_KPM_BRDM2_HQ", "Flex_CUP_KPA_GAZ_Vodnik_AGS"]] call _fnc_saveToTemplate;
 ["vehiclesAPCs", ["Flex_CUP_KPA_BTR80", "Flex_CUP_KPA_BTR80A"]] call _fnc_saveToTemplate;
 ["vehiclesIFVs", ["Flex_CUP_KPA_BTR80", "Flex_CUP_KPA_BTR80A"]] call _fnc_saveToTemplate;
 ["vehiclesLightTanks",  ["Flex_CUP_KPA_T55"]] call _fnc_saveToTemplate;
@@ -59,8 +59,8 @@
 
 ["vehiclesMilitiaLightArmed", ["Flex_CUP_KPA_UAZ_MG"]] call _fnc_saveToTemplate;
 ["vehiclesMilitiaTrucks", ["Flex_CUP_KPA_Ural_Open","Flex_CUP_KPA_Ural"]] call _fnc_saveToTemplate;
-["vehiclesMilitiaCars", ["Flex_CUP_KPA_UAZ_AMB"]] call _fnc_saveToTemplate;
-["vehiclesMilitiaAPCs", ["Flex_CUP_KPA_GAZ_Vodnik_PK", "Flex_CUP_KPA_GAZ_Vodnik_AGS"]] call _fnc_saveToTemplate;
+["vehiclesMilitiaCars", ["Flex_CUP_KPA_UAZ_AMB", "Flex_CUP_KPM_BRDM2_HQ", "Flex_CUP_KPM_BRDM2"]] call _fnc_saveToTemplate;
+["vehiclesMilitiaAPCs", ["Flex_CUP_KPM_BTR60"]] call _fnc_saveToTemplate;
 
 ["vehiclesPolice", ["B_GEN_Offroad_01_gen_F"]] call _fnc_saveToTemplate;
 
@@ -81,8 +81,6 @@
 
 ["minefieldAT", ["CUP_MineE_M"]] call _fnc_saveToTemplate;
 ["minefieldAPERS", ["APERSMine"]] call _fnc_saveToTemplate;
-
-#include "CUP_Vehicle_Attributes.sqf"
 
 /////////////////////
 ///  Identities   ///
@@ -456,9 +454,13 @@ _policeLoadoutData set ["uniforms", ["CUP_U_C_Policeman_01"]];
 _policeLoadoutData set ["vests", ["CUP_V_C_Police_Holster"]];
 _policeLoadoutData set ["helmets", ["CUP_H_C_Policecap_01"]];
 
-_policeLoadoutData set ["SMGs", [
+_policeLoadoutData set ["carbines", [
     ["CUP_arifle_AKS74U", "", "", "", ["CUP_30Rnd_TE1_Red_Tracer_545x39_AK74_plum_M"], [], ""]
 ]];
+_policeLoadoutData set ["rifles", [
+    ["CUP_arifle_SAIGA_MK03_Wood", "", "", "", ["CUP_10Rnd_762x39_SaigaMk03_M"], [], ""],
+    ["CUP_arifle_AK47_Early_semiauto", "", "", "", ["CUP_10Rnd_762x39_SaigaMk03_M"], [], ""]
+]];    
 _policeLoadoutData set ["sidearms", [
     ["CUP_hgun_Makarov", "", "", "", ["CUP_8Rnd_9x18_Makarov_M"], [], ""]
 ]];
@@ -469,8 +471,8 @@ _policeLoadoutData set ["sidearms", [
 
 private _militiaLoadoutData = _loadoutData call _fnc_copyLoadoutData;
 _militiaLoadoutData set ["uniforms", ["KPA_Combat_Uniform_Rolled", "KPA_P_Combat_Uniform_Rolled_Gloves", "KPA_P_Combat_Uniform_Gloves", "KPA_Combat_Uniform"]];
-_militiaLoadoutData set ["vests", ["Flex_CUP_KPA_V_Type06_MG_Green", "Flex_CUP_KPA_V_Type06_Rifle_Green", "Flex_CUP_KPA_V_Type06_SOF_Green", "Flex_CUP_KPA_V_Type06_TL_Green"]];
-_militiaLoadoutData set ["sniVests", ["V_TacVest_oli"]];
+_militiaLoadoutData set ["vests", ["Flex_CUP_KPA_V_Type06_Lite_Green"]];
+_militiaLoadoutData set ["sniVests", ["Flex_CUP_KPA_V_Type06_Lite_Green"]];
 _militiaLoadoutData set ["backpacks", ["Flex_CUP_KPA_Backpack_Compact"]];
 _militiaLoadoutData set ["slBackpacks", ["Flex_CUP_KPA_Radio_Backpack"]];
 _militiaLoadoutData set ["atBackpacks", ["Flex_CUP_KPA_Kitbag"]];
